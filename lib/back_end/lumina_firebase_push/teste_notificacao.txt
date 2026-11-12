@@ -1,0 +1,125 @@
+<?php
+// Permitir CORS (opcional)
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Accept, Authorization");
+
+date_default_timezone_set('America/Sao_Paulo');
+
+// Corrigido: Verificar se REQUEST_METHOD está definido antes de acessar
+if (php_sapi_name() !== 'cli' && isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit();
+}
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Kreait\Firebase\Factory;
+use Kreait\Firebase\Messaging\CloudMessage;
+use Kreait\Firebase\Messaging\Notification;
+
+require __DIR__ . '/../conecta.php';
+
+$firebaseJsonPath = __DIR__ . '/firebase_credentials.json';
+
+// Variáveis de controle
+$enviadas = 0;
+$falhas = 0;
+$erros = [];
+
+try {
+    $factory = (new Factory)->withServiceAccount($firebaseJsonPath);
+    $messaging = $factory->createMessaging();
+} catch (\Throwable $e) {
+    $mensagemErro = "Erro ao iniciar Firebase: " . $e->getMessage();
+    error_log($mensagemErro);
+    $erros[] = $mensagemErro;
+
+    http_response_code(500);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Erro ao iniciar Firebase',
+        'errors' => $erros
+    ]);
+    exit();
+}
+
+try {
+    $conn = getConnection();  // função do conecta.php
+} catch (\Throwable $e) {
+    $mensagemErro = "Erro ao conectar ao banco de dados: " . $e->getMessage();
+    error_log($mensagemErro);
+    $erros[] = $mensagemErro;
+
+    http_response_code(500);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Erro ao conectar ao banco',
+        'errors' => $erros
+    ]);
+    exit();
+}
+
+// Query corrigida: usa 'nm_user' conforme tabela
+$sql = "
+    SELECT u.cd_id AS user_id,
+           u.nm_user AS nome,
+           u.nm_email AS email,
+           ut.fcm_token
+    FROM tb_user u
+    JOIN user_tokens ut ON ut.user_id = u.cd_id
+    WHERE ut.fcm_token IS NOT NULL AND TRIM(ut.fcm_token) != ''
+";
+
+try {
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (\Throwable $e) {
+    $mensagemErro = "Erro ao buscar usuários: " . $e->getMessage();
+    error_log($mensagemErro);
+    $erros[] = $mensagemErro;
+
+    http_response_code(500);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Erro ao buscar usuários',
+        'errors' => $erros
+    ]);
+    exit();
+}
+
+foreach ($usuarios as $usuario) {
+    $userId = $usuario['user_id'];
+    $token = $usuario['fcm_token'];
+    $nome = $usuario['nome'];
+    $email = $usuario['email'];
+
+    if (!$token) {
+        continue;
+    }
+
+    $titulo = "Teste de Notificação";
+    $mensagem = "Olá {$nome}, seu email é {$email}. Teste de envio de push notification.";
+
+    $message = CloudMessage::withTarget('token', $token)
+        ->withNotification(Notification::create($titulo, $mensagem));
+
+    try {
+        $messaging->send($message);
+        $enviadas++;
+    } catch (\Throwable $e) {
+        $mensagemErro = "Erro ao enviar notificação para usuário {$userId} ({$nome}): " . $e->getMessage();
+        error_log($mensagemErro);
+        $erros[] = $mensagemErro;
+        $falhas++;
+    }
+}
+
+echo json_encode([
+    "success" => true,
+    "message" => "Teste completado.",
+    "notificacoes_enviadas" => $enviadas,
+    "falhas" => $falhas,
+    "errors" => $erros
+]);
