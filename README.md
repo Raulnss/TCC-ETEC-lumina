@@ -1,185 +1,226 @@
- Lúmina 
 
-<p align="center">
-Aplicativo de monitoramento menstrual.
-</p>
+# Lúmina — Aplicativo de Monitoramento de Atividade Menstrual
 
-✨ Sobre o projeto
+Aplicativo desenvolvido para auxiliar no monitoramento do ciclo menstrual, registro de sintomas e disseminação de informações educativas sobre saúde menstrual e cuidados íntimos.
 
-O Lúmina é um aplicativo desenvolvido com o objetivo de auxiliar mulheres e jovens no acompanhamento do ciclo menstrual, promovendo o autoconhecimento, o autocuidado e o acesso à informação sobre saúde feminina.
+---
 
-O projeto surgiu a partir da identificação da falta de informações acessíveis e confiáveis sobre menstruação, higiene íntima e educação sexual, especialmente entre jovens.
+## Sobre o projeto
 
-Mais do que um aplicativo de monitoramento menstrual, o Lúmina busca ser um espaço de aprendizado e acolhimento, permitindo que suas usuárias compreendam melhor seu corpo e acompanhem as diferentes fases do ciclo.
+O **Lúmina** é um aplicativo desenvolvido com o objetivo de facilitar o acompanhamento do ciclo menstrual e promover o acesso a informações confiáveis sobre saúde feminina.
 
-🌷 Lúmina — Brilhe em cada passo, cuide-se em cada fase.
-🎯 Objetivos
-Facilitar o acompanhamento e o controle do ciclo menstrual.
-Permitir o registro de sintomas físicos e emocionais.
-Disponibilizar previsões das próximas menstruações.
-Apresentar estatísticas e informações sobre o ciclo.
-Promover o conhecimento sobre saúde íntima e educação menstrual.
-Incentivar o autocuidado e a autonomia das usuárias.
-🚀 Funcionalidades
+O projeto surgiu a partir da identificação da falta de conhecimento e de acesso a conteúdos educativos sobre menstruação, higiene íntima e educação sexual, especialmente entre o público jovem.
 
-O aplicativo foi planejado com diversas funcionalidades para proporcionar uma experiência intuitiva e completa.
+A proposta é oferecer uma plataforma intuitiva que permita às usuárias registrar informações sobre seus ciclos, acompanhar sintomas, visualizar previsões e consultar conteúdos educativos relacionados à saúde menstrual.
 
-Funcionalidade	Descrição
-🔐 Cadastro e Login	Criação de conta e autenticação de usuárias.
-📅 Calendário menstrual	Registro e acompanhamento dos dias de menstruação.
-⏳ Previsão do ciclo	Estimativa da próxima menstruação e das fases do ciclo.
-💗 Registro de sintomas	Cadastro de sintomas físicos, emocionais, humor e fluxo menstrual.
-📊 Estatísticas	Visualização de informações e médias relacionadas ao ciclo.
-👤 Perfil	Gerenciamento das informações pessoais da usuária.
-🔔 Notificações	Configuração dos avisos do aplicativo.
-🎨 Tema personalizado	Alternância entre modo claro e modo escuro.
-🔑 Alteração de senha	Possibilidade de atualizar a senha da conta.
-📚 Área educativa	Conteúdos informativos sobre ciclo menstrual e saúde íntima.
-🛠️ Tecnologias utilizadas
+Mais do que uma ferramenta de monitoramento, o Lúmina busca incentivar o autoconhecimento, a autonomia e o cuidado com a saúde.
 
-O desenvolvimento do Lúmina utiliza tecnologias voltadas à construção de aplicações mobile e gerenciamento de dados.
+## Objetivos
 
-Tecnologia	Utilização
-Flutter	Desenvolvimento da interface mobile.
-PHP	Desenvolvimento do Back-end e comunicação com o banco de dados.
-MySQL	Armazenamento e gerenciamento das informações.
-Apache	Servidor responsável pela execução da aplicação Back-end.
-Dart	Linguagem utilizada no desenvolvimento Flutter.
+- Facilitar o acompanhamento do ciclo menstrual.
+- Permitir o registro de sintomas físicos e emocionais.
+- Disponibilizar previsões das próximas menstruações.
+- Apresentar estatísticas e informações sobre o ciclo.
+- Promover o acesso a conteúdos educativos sobre saúde íntima.
+- Incentivar o autocuidado e o autoconhecimento.
 
+## Funcionalidades
 
+O aplicativo conta com funcionalidades destinadas ao acompanhamento e gerenciamento das informações menstruais.
 
-O Lúmina foi projetado para oferecer uma navegação simples e intuitiva, com telas organizadas para facilitar o acesso às funcionalidades.
+| Funcionalidade | Descrição |
+|---|---|
+| Cadastro e Login | Criação de conta e autenticação de usuárias. |
+| Calendário menstrual | Registro e acompanhamento dos dias de menstruação. |
+| Previsão do ciclo | Estimativa da próxima menstruação e das fases do ciclo. |
+| Registro de sintomas | Cadastro de sintomas físicos, emocionais, humor e fluxo menstrual. |
+| Estatísticas | Visualização de informações e médias relacionadas ao ciclo. |
+| Perfil | Gerenciamento das informações pessoais da usuária. |
+| Notificações | Configuração dos avisos do aplicativo. |
+| Tema personalizado | Alternância entre modo claro e modo escuro. |
+| Alteração de senha | Possibilidade de atualizar a senha da conta. |
+| Área educativa | Conteúdos informativos sobre ciclo menstrual e saúde íntima. |
 
-Entre as principais telas estão:
+## Tecnologias utilizadas
 
-Tela de carregamento;
-Telas de apresentação (Onboarding);
-Login e cadastro;
-Cadastro inicial de informações;
-Tela inicial (Home);
-Calendário menstrual;
-Registro de sintomas e autocuidado;
-Estatísticas do ciclo;
-Perfil da usuária;
-Alteração de senha;
-Notificações.
-Prévia do aplicativo: adicione imagens das telas na pasta assets/screenshots e utilize a seção abaixo para apresentá-las.
+O desenvolvimento do Lúmina utiliza tecnologias voltadas à criação de aplicações mobile, desenvolvimento Back-end e gerenciamento de dados.
 
-<!-- Exemplo para adicionar imagens:
-<p align="center">
-<img src="assets/screenshots/home.png" width="200">
-<img src="assets/screenshots/calendario.png" width="200">
-<img src="assets/screenshots/estatisticas.png" width="200">
-</p>
--->
+| Tecnologia | Utilização |
+|---|---|
+| Flutter | Desenvolvimento da aplicação mobile. |
+| Dart | Linguagem de programação utilizada no Flutter. |
+| PHP | Desenvolvimento do Back-end e comunicação com o banco de dados. |
+| MySQL | Armazenamento e gerenciamento das informações. |
+| Apache | Servidor responsável pela execução do Back-end. |
 
-🏗️ Arquitetura do projeto
+## Arquitetura do projeto
 
 O projeto utiliza uma arquitetura baseada na comunicação entre o aplicativo mobile, o Back-end e o banco de dados.
 
-text
-┌──────────────────────────┐
-│       Aplicativo         │
-│         Flutter          │
-│                          │
-│   Interface e navegação  │
-└────────────┬─────────────┘
-             │
-             │ Requisições HTTP
-             ▼
-┌──────────────────────────┐
-│         Back-end         │
-│           PHP            │
-│                          │
-│ Regras de negócio e API  │
-└────────────┬─────────────┘
-             │
-             │ Consultas SQL
-             ▼
-┌──────────────────────────┐
-│        Banco de Dados    │
-│           MySQL          │
-│                          │
-│ Dados das usuárias       │
-└──────────────────────────┘
+```text
++----------------------------+
+|       Aplicativo           |
+|         Flutter            |
+|                            |
+| Interface e navegação      |
++-------------+--------------+
+              |
+              | Requisições HTTP
+              |
+              v
++----------------------------+
+|         Back-end           |
+|           PHP              |
+|                            |
+| Regras de negócio e API    |
++-------------+--------------+
+              |
+              | Consultas SQL
+              |
+              v
++----------------------------+
+|       Banco de Dados       |
+|           MySQL            |
+|                            |
+| Armazenamento de dados     |
++----------------------------+
+```
 
-⚙️ Como executar o projeto
-Pré-requisitos
+## Como executar o projeto
 
-Antes de executar o projeto, é necessário possuir:
+### Pré-requisitos
 
-Flutter SDK
-Dart SDK
-PHP
-MySQL
-Apache
-Um editor de código, como Visual Studio Code.
-1. Clone o repositório
-bash
+Antes de executar o projeto, é necessário possuir as seguintes ferramentas instaladas:
+
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- [Dart SDK](https://dart.dev/get-dart)
+- [PHP](https://www.php.net/)
+- [MySQL](https://www.mysql.com/)
+- [Apache](https://httpd.apache.org/)
+- Editor de código, como [Visual Studio Code](https://code.visualstudio.com/).
+
+### 1. Clonar o repositório
+
+```bash
 git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+```
 
-2. Entre na pasta do projeto
-bash
+### 2. Acessar a pasta do projeto
+
+```bash
 cd SEU-REPOSITORIO
+```
 
-3. Instale as dependências do Flutter
-bash
+### 3. Instalar as dependências
+
+Execute o comando abaixo na pasta do projeto Flutter:
+
+```bash
 flutter pub get
+```
 
-4. Configure o Back-end
-Configure o servidor Apache.
-Disponibilize os arquivos PHP no diretório do servidor.
-Configure a conexão com o banco de dados MySQL.
-Importe o arquivo SQL do projeto, caso esteja disponível.
-Configure corretamente o endereço da API utilizado pelo aplicativo.
-5. Execute o aplicativo
+### 4. Configurar o Back-end
+
+- Configure o servidor Apache.
+- Disponibilize os arquivos PHP no diretório do servidor.
+- Configure a conexão com o banco de dados MySQL.
+- Importe o arquivo SQL do projeto, caso esteja disponível.
+- Configure o endereço da API utilizado pelo aplicativo.
+
+### 5. Executar o aplicativo
 
 Verifique os dispositivos disponíveis:
 
-bash
+```bash
 flutter devices
-
+```
 
 Execute o projeto:
 
-bash
+```bash
 flutter run
+```
 
+**Observação:** os comandos e configurações podem variar conforme a estrutura atual do projeto e o ambiente de desenvolvimento.
 
-Observação: os comandos e configurações podem variar conforme a estrutura atual do repositório e o ambiente de desenvolvimento.
+## Telas do aplicativo
 
-🔒 Segurança e privacidade
+O Lúmina possui uma interface organizada para facilitar a navegação e o acesso às funcionalidades.
 
-O Lúmina trabalha com informações pessoais e registros relacionados ao ciclo menstrual. Por isso, a segurança e a privacidade devem ser consideradas durante o desenvolvimento.
+Entre as principais telas estão:
 
-Entre os requisitos definidos para o projeto estão:
+- Tela de carregamento;
+- Telas de introdução (Onboarding);
+- Login e cadastro;
+- Cadastro inicial de informações;
+- Tela inicial (Home);
+- Calendário menstrual;
+- Registro de sintomas e autocuidado;
+- Estatísticas do ciclo;
+- Perfil da usuária;
+- Alteração de senha;
+- Configurações de notificações.
 
-Proteção das informações das usuárias.
-Armazenamento seguro de credenciais.
-Criptografia ou hash adequado de senhas.
-Controle de autenticação.
-Proteção da comunicação entre aplicativo e servidor.
+### Capturas de tela
 
-Importante: as previsões menstruais são estimativas e não substituem avaliações ou orientações de profissionais de saúde.
+As imagens das principais telas podem ser adicionadas nesta seção.
 
+Sugestão de organização:
+
+```text
+assets/
+└── screenshots/
+    ├── home.png
+    ├── login.png
+    ├── cadastro.png
+    ├── calendario.png
+    ├── autocuidado.png
+    ├── estatisticas.png
+    └── perfil.png
+```
+
+Exemplo de exibição:
+
+```html
+<p align="center">
+  <img src="assets/screenshots/home.png" width="200">
+  <img src="assets/screenshots/calendario.png" width="200">
+  <img src="assets/screenshots/estatisticas.png" width="200">
+</p>
+```
+
+## Segurança e privacidade
+
+Considerando que o aplicativo trabalha com informações pessoais e registros relacionados ao ciclo menstrual, a segurança e a privacidade dos dados são aspectos importantes do projeto.
+
+Entre os requisitos de segurança definidos estão:
+
+- Proteção das informações das usuárias.
+- Armazenamento seguro de credenciais.
+- Proteção das senhas por meio de hash criptográfico adequado.
+- Controle de autenticação.
+- Proteção da comunicação entre aplicativo e servidor.
+
+**Importante:** as previsões do ciclo menstrual são estimativas e não substituem avaliações ou orientações de profissionais de saúde.
+
+### Orientadores
+
+- Augusto Fabiano Abranches
+- Osvaldo Luiz P. Bertoli
+
+## Instituição de ensino
+
+**Centro Paula Souza — ETEC de Itanhaém**
 
 Curso Técnico em Desenvolvimento de Sistemas.
 
 Projeto acadêmico desenvolvido em 2025.
 
-📚 Referências
-ONU Brasil — Pobreza menstrual e educação
-G1 — Saúde menstrual e evasão escolar
-Vídeo educativo sobre o ciclo menstrual
- Considerações finais
+## Referências
 
-O Lúmina nasceu com um propósito: tornar o conhecimento sobre o ciclo menstrual mais acessível, incentivar o autocuidado e ajudar mulheres e jovens a desenvolverem uma relação mais consciente com o próprio corpo.
+- [ONU Brasil — Pobreza menstrual e educação](https://brasil.un.org/pt-br/136226-62-das-jovens-que-menstruam-j%C3%A1-deixaram-de-ir%C3%A0-escola-ou-outro-lugar-por-causa-da)
+- [G1 — Saúde menstrual e evasão escolar](https://g1.globo.com/sp/santos-regiao/educacao/noticia/2024/11/04/pesquisa-identifica-saude-menstrual-como-causa-de-evasao-escolar-em-cidade-no-litoral-de-sp-entenda.ghtml)
+- [Vídeo educativo sobre o ciclo menstrual](https://www.youtube.com/watch?v=ujqPbVc9zE0)
 
-Acreditamos que informação também é uma forma de cuidado.
 
-<p align="center">
-<br>
-<strong>Lúmina © 2025</strong>
-<br>
-ETEC de Itanhaém — Centro Paula Souza
-</p>
+Desenvolvido pelo grupo Ellevate — ETEC de Itanhaém | 2025.
