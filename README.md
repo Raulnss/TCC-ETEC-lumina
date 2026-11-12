@@ -223,4 +223,4 @@ Projeto acadêmico desenvolvido em 2025.
 - [Vídeo educativo sobre o ciclo menstrual](https://www.youtube.com/watch?v=ujqPbVc9zE0)
 
 
-Desenvolvido pelo grupo Ellevate — ETEC de Itanhaém | 2025.
+ETEC de Itanhaém | 2025.
